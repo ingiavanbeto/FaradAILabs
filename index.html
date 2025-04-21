@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FaradAI - Cursos de Tecnología</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #004aad;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+    main {
+      padding: 2em;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .course-list {
+      margin-top: 2em;
+    }
+    .course-card {
+      background: white;
+      padding: 1em;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 1em;
+    }
+    footer {
+      text-align: center;
+      padding: 1em;
+      background: #222;
+      color: #ccc;
+      margin-top: 3em;
+    }
+    button {
+      background-color: #0073ff;
+      color: white;
+      border: none;
+      padding: 0.5em 1em;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005fcc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FaradAI</h1>
+    <p>Impulsamos tu futuro con cursos de tecnología avanzada</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>¿Quiénes somos?</h2>
+      <p>
+        En FaradAI nos dedicamos a la formación en tecnologías de vanguardia como el Internet Industrial de las Cosas (IIoT), Inteligencia Artificial, Automatización y más.
+        Nuestros cursos están diseñados por expertos y orientados a la práctica.
+      </p>
+    </section>
+
+    <section class="course-list">
+      <h2>Nuestros Cursos</h2>
+      <div id="courses-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 FaradAI - Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    const courses = [
+      {
+        title: "Internet Industrial de las Cosas (IIoT)",
+        description: "Curso práctico en redes industriales, sensores, Raspberry Pi y Node-RED.",
+      },
+      {
+        title: "Introducción a la Inteligencia Artificial",
+        description: "Fundamentos de IA, redes neuronales y aprendizaje automático.",
+      },
+      {
+        title: "Automatización con PLCs",
+        description: "Programación de PLCs, SCADA y comunicación industrial.",
+      }
+    ];
+
+    const container = document.getElementById("courses-container");
+
+    courses.forEach(course => {
+      const card = document.createElement("div");
+      card.className = "course-card";
+
+      card.innerHTML = `
+        <h3>${course.title}</h3>
+        <p>${course.description}</p>
+        <button onclick="alert('¡Más información pronto disponible!')">Más información</button>
+      `;
+
+      container.appendChild(card);
+    });
+  </script>
+</body>
+</html>
